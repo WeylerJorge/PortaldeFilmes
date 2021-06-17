@@ -1,0 +1,492 @@
+
+html, body, header{
+    margin: 0;
+    padding: 0;
+    margin-right: 0;
+    padding-right: 0;
+    overflow-x: hidden; 
+    overflow-y: auto;
+  }
+
+  header{
+    background-image: url('img/fundo1.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100px;
+    justify-content: center;
+    text-align: center;
+  }
+  /* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: red; 
+}
+
+.lancamentos_text{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 1000;
+  text-align: center;
+  text-shadow: 2px 2px 4px gray;
+  }
+  .lancamentos_text:hover{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 1000;
+    text-align: center;
+    text-shadow: 2px 2px 4px red;
+    }
+.main_area{
+    background-color: white;
+    width: 100%;
+}
+.carousel-item{
+    margin-bottom: 40px;
+}
+
+.negrito{
+    font-weight: bold;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  background-image: none;
+}
+.content {
+  display: none;
+  position: relative;
+  min-height: 200px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  padding: 20px;
+}
+
+.content-display {
+  display: block;
+}
+
+.imageContainer {
+  transition: 250ms all;
+  width: 300px;
+  margin: 50px;
+}
+
+.imageContainer:hover {
+  margin-left: 0 40px;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.imageContainer {
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.imageContainer img {
+  width: 100%;
+}
+
+
+.content-display {
+  display: block;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.content div {
+  margin: 10px;
+}
+
+
+#content-close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  padding: 10px;
+  /* width: 35px;; */
+  border: 1px solid lightgrey;
+  border-radius: 45%;
+  left: 20px;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 100px;
+  color: black;
+  padding-left: 180px;
+}
+
+
+
+.content {
+  display: none;
+  position: relative;
+  min-height: 200px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  padding: 20px;
+}
+
+
+.content-display {
+  display: block;
+}
+
+
+.content-display {
+  display: block;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.content div {
+  margin: 10px;
+}
+
+
+#content-close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  padding: 10px;
+  /* width: 35px;; */
+  border: 1px solid lightgrey;
+  border-radius: 45%;
+  left: 20px;
+}
+
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 100px;
+  color: rgb(0, 0, 0);
+  margin-left: -300px;
+}
+.destaque_mais{
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+}
+.card-body{
+    margin: 0 auto;
+    border: none;
+}
+.estilo-navbar{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  margin-left: 20px;
+  margin-right: -15px;
+}
+
+.ultimas_avaliacoes div{
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+.avaliacoes h1{
+    margin-bottom: 20px;
+}
+.ultimas_avaliacoes_mais div{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+}
+.card-body{
+    padding: 0%;
+    border: none;
+}
+.mais_filmes div{
+    text-align: center;
+    padding: 0%;
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+    border-top: none;
+}
+.mais_entrevistas{
+    text-align: right;
+    padding: 0%;
+}
+.mais_entrevistas div{
+    text-align: left;
+    padding: 0 10px;
+}
+.novidades{
+    margin-top: 20px;
+}
+.novidades div img{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.footer_area{
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.footer2{
+    background-color: #dbdbdb;
+    margin: 0 auto;
+}
+
+.destaque_img{
+    padding-bottom: 20px;
+}
+
+.logo_nav{
+    width: 245px;
+    height: 55px;
+    margin: -15px;
+    margin-bottom: -8%;
+}
+
+.estrelas input[type=radio] {
+    display: none;
+    float: left;
+    width: 1000px;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-bottom: 20px;
+  }
+
+  .digitar{
+    background-color: black;
+    border-color: white;
+    color: white;
+  }
+  .digitar:focus, .digitar:placeholder{
+    background-color: black;
+    border-color: red;
+    color: red;
+  }
+  
+
+  .estrelas label i.fa:before {
+    content:'\f005';
+    color: #FC0;
+  }
+
+  .estrelas input[type=radio]:checked ~ label i.fa:before {
+    color: #CCC;
+    border-color: #FC0;
+  }
+
+.link { color: white; transition: 1s;}
+.link:hover { color: rgb(255, 166, 0); transition: 0.2s;} 
+
+.youtube_carousel{
+    width: 100%;
+    height: 350px;
+}
+section {
+  position: relative;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  overflow-y: hidden;  
+  flex: 0 0 auto;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  transition: 250ms all;
+  overflow: hidden; /* Hide scrollbars */
+}
+
+.section:hover{
+  overflow: scroll;
+  overflow-y: hidden; /* Hide scrollbars */
+}
+
+.estilo-navbar2{
+  margin-top: 7px;
+}
+
+.fade-in-image {
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+@media screen and (max-width:600px){
+    .entrevista3{
+        display: none;
+    }
+    header{
+      background-image: url('img/fundo1.png');
+      background-repeat: no-repeat;
+      background-size: 750px;
+      height: 100%;
+    }
+    .estilo-navbar{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      width: 100%;
+    }
+    .mr-3{
+        display: none;
+    }
+    .novidades h1{
+        font-size: 30px;
+    }
+    .destaque div img{
+        margin-top: 20px;
+    }
+    .lancamentos div iframe{
+        height: 300px;
+    }
+    .logo_footer{
+        display: none;
+    }
+    .logo_nav{
+        padding-left: 20px;
+        width: 340px;
+        height: 50px;
+        margin-top: 1px;
+        margin-bottom: 65px;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      height: 100px;
+      width: 100px;
+      outline: black;
+      background-size: 100%, 100%;
+      background-image: none;
+    }
+    .estilo-navbar2{
+      margin-top: -80px;
+    }
+
+    .carousel-control-next-icon:after
+    {
+      content: '>';
+      font-size: 55px;
+      color: black;
+      padding-left: 5px;
+    }
+    
+    .carousel-control-prev-icon:after {
+      content: '<';
+      font-size: 55px;
+      color: black;
+      margin-left: -10px;
+    }
+
+}
+@media screen and (min-width:601px) and (max-width:1224px){
+    .destaque div img{
+        width: 100%;;
+        height: 100%;
+    }
+    header{
+      background-image: url('img/fundo1.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 100%;
+    }
+    .estilo-navbar{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      margin-top: 5px;
+    }
+    .mais_filmes div img{
+        width: 100%;
+        padding: 10px;
+    }
+    .destaques div iframe{
+        height: 300px;
+    }
+    .ultimas_avaliacoes3{
+        display: none;
+    }
+    .mr-3{
+        display: none;
+    }
+    .lancamentos div iframe{
+        height: 300px;
+    }
+    .logo_footer{
+        display: none;
+    }
+    .logo_nav{
+      padding-left: 20px;
+      width: 350px;
+      height: 60px;
+  }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      height: 100px;
+      width: 100px;
+      outline: black;
+      background-image: none;
+    }
+    
+    .carousel-control-next-icon:after
+    {
+      content: '>';
+      font-size: 75px;
+      color: black;
+      margin-left: -50px;
+    }
+    
+    .carousel-control-prev-icon:after {
+      content: '<';
+      font-size: 75px;
+      color: black;
+      margin-left: -150px;
+    }
+}
+
