@@ -3,9 +3,9 @@ const searchInput = document.querySelector('#exampleInputEmail1');
 const moviesContainer = document.querySelector('#movies-container');
 const moviesSearchable = document.querySelector('#movies-searchable');
 
-
-function createImageContainer(imageUrl, id, title, overview, vote_average) {
+function createImageContainer(imageUrl, id, title, overview, vote_average, info) {
     const tempDiv = document.createElement('div');
+
     tempDiv.setAttribute('class', 'imageContainer');
     tempDiv.setAttribute('data-id', id);
 
@@ -16,17 +16,19 @@ function createImageContainer(imageUrl, id, title, overview, vote_average) {
     <div class="card-body">
         <h5 class="card-title" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
         'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">${overview}</h5>
-        <span class="movie_average" style="color: ${alterarCor(vote_average)};"><i class="fas fa-star" style="color:  ${alterarCor(vote_average)};"></i>${vote_average}</span>
+        <span class="movie_average" style="color: ${alterarCor(vote_average)};"><i class="fas fa-star" style="color:  ${alterarCor(vote_average)};"></i>${vote_average}/10</span>
     </div>
     <div class="overview">
     <h3 style="font-size: 40px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
     'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 1000;">Sinopse</h3>
     <p style="font-size: 18px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
     'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">${title}</p>
+    <a href="https://www.themoviedb.org/movie/${id}" target="_blank"><button type="button" style="color: ${alterarCor(vote_average)};" class="btn btn-outline-dark">Mais Informações</button></a>
     </div>
     </div>
     </div>
     `;
+
     tempDiv.innerHTML = movieElement;
 
     return tempDiv;
@@ -115,15 +117,18 @@ function renderSearchMovies(data) {
 function generateMoviesBlock(data) {
     const movies = data.results;
     const section = document.createElement('section');
+
     section.setAttribute('class', 'section');
 
     for (let i = 0; i < movies.length; i++) {
-        const { poster_path, id, title, overview, vote_average } = movies[i];
+        const { poster_path, id, title, overview, vote_average} = movies[i];
+        
 
         if (poster_path) {
             const imageUrl = MOVIE_DB_IMAGE_ENDPOINT + poster_path;
-
+            
             const imageContainer = createImageContainer(imageUrl, id, overview, title, vote_average);
+
             section.appendChild(imageContainer);
         }
     }
@@ -159,12 +164,12 @@ searchButton.onclick = function (event) {
 }
 
 document.onclick = function (event) {
-    log('Event: ', event);
     const { tagName, id } = event.target;
     if (tagName.toLowerCase() === 'img') {
         const movieId = event.target.dataset.movieId;
         const section = event.target.parentElement.parentElement;
         const content = section.nextElementSibling;
+
         content.classList.add('content-display');
         getVideosByMovieId(movieId, content);
     }
